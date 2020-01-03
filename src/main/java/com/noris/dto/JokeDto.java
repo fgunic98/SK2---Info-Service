@@ -1,6 +1,11 @@
 package com.noris.dto;
 
-
+/**
+ * 
+ * @author Coa
+ * Klasa za rukovanje sa sala objektima
+ *
+ */
 public class JokeDto {
 
     private String id;

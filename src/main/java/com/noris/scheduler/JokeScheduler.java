@@ -13,6 +13,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 
+ * @author Coa
+ * Scheduler klasa za rukovanje sa intervalima hvatanja sala
+ *
+ */
 @Component
 public class JokeScheduler {
 
