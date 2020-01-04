@@ -43,5 +43,6 @@ public class JokeScheduler {
         if (matchesDtoResponseEntity.getStatusCode().equals(HttpStatus.OK))
             jmsTemplate.convertAndSend(emailQueueDestination, objectMapper
                     .writeValueAsString(matchesDtoResponseEntity.getBody()));
+        System.out.println(matchesDtoResponseEntity.getBody().getId() + "," + matchesDtoResponseEntity.getBody().getJoke());
     }
 }
