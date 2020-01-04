@@ -19,11 +19,11 @@ public class JokeDto {
         this.id = id;
     }
 
-    public String getUtcDate() {
+    public String getJoke() {
         return joke;
     }
 
-    public void setUtcDate(String joke) {
+    public void setJoke(String joke) {
         this.joke = joke;
     }
 }
