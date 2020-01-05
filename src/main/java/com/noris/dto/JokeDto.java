@@ -1,12 +1,14 @@
 package com.noris.dto;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Coa
  * Klasa za rukovanje sa sala objektima
  *
  */
-public class JokeDto {
+public class JokeDto implements Serializable{
 
     private String id;
     private String joke;
