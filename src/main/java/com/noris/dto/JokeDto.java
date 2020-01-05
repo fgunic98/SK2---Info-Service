@@ -2,6 +2,8 @@ package com.noris.dto;
 
 import java.io.Serializable;
 
+import javax.persistence.ManyToOne;
+
 /**
  * 
  * @author Coa
@@ -12,7 +14,12 @@ public class JokeDto implements Serializable{
 
     private String id;
     private String joke;
-
+    @ManyToOne
+    private UserDto user;
+    @ManyToOne
+    private JokesDto jokeDto;
+    
+    
     public String getId() {
         return id;
     }
