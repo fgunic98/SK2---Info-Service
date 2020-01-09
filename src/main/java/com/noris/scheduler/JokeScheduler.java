@@ -53,7 +53,7 @@ public class JokeScheduler {
 
             ResponseEntity<JokeDto> response = norisApiClient.exchange("https://api.chucknorris.io/jokes/random", HttpMethod.GET,entity,JokeDto.class);
             if (response.getStatusCode().equals(HttpStatus.OK))
-                jmsTemplate.convertAndSend(emailQueueDestination, objectMapper.writeValueAsString(response.getBody().getValue()));
+                jmsTemplate.convertAndSend(emailQueueDestination, objectMapper.writeValueAsString(response.getBody()));
 
             System.out.println(response);
         } catch (Exception ex) {
