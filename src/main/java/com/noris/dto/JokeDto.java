@@ -19,10 +19,15 @@ public class JokeDto implements Serializable{
 	 private String url;
 	 private String value;
 	 
+	 private int interval;
+	 private long LastTimeExecuted;
+	 
 	 public JokeDto() {}
 
-	 public JokeDto(ArrayList<Object> categories, String created_at, String icon_url, String id, String updated_at,
-			String url, String value) {
+	 
+
+	public JokeDto(ArrayList<Object> categories, String created_at, String icon_url, String id, String updated_at,
+			String url, String value, int interval, int lastTimeExecuted) {
 		super();
 		this.categories = categories;
 		this.created_at = created_at;
@@ -31,7 +36,35 @@ public class JokeDto implements Serializable{
 		this.updated_at = updated_at;
 		this.url = url;
 		this.value = value;
+		this.interval = interval;
+		LastTimeExecuted = lastTimeExecuted;
 	}
+
+
+
+	public int getInterval() {
+		return interval;
+	}
+
+
+
+	public void setInterval(int interval) {
+		this.interval = interval;
+	}
+
+
+
+	public long getLastTimeExecuted() {
+		return LastTimeExecuted;
+	}
+
+
+
+	public void setLastTimeExecuted(long lastTimeExecuted) {
+		LastTimeExecuted = lastTimeExecuted;
+	}
+
+
 
 	public String getCreated_at() {
 	  return created_at;
