@@ -1,5 +1,6 @@
 package com.noris.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import com.noris.repository.JokeRepository;
 @Transactional
 public class JokeServiceImpl implements JokeService{
 	
+	@Autowired
 	private JokeRepository jokeRepository;
 	
 	public JokeServiceImpl(JokeRepository jokeRepository) {
@@ -18,7 +20,7 @@ public class JokeServiceImpl implements JokeService{
 	
 	@Override
 	public JokeDto getLatest() {
-		if(jokeRepository.findTopByOrderByCreatedDesc().isPresent()) return jokeRepository.findTopByOrderByCreatedDesc().get();
+		if(jokeRepository.findTopByOrderById().isPresent()) return jokeRepository.findTopByOrderById().get();
 		return null;
 	}
 

@@ -9,7 +9,6 @@ import org.springframework.web.client.RestTemplate;
 public class NorisApiConfiguration {
 
     @Bean
-    //@LoadBalanced
     public RestTemplate NorisApiClient() {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate;
