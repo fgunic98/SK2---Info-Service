@@ -3,17 +3,24 @@ package com.noris.dto;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * 
  * @author Coa
  * Klasa za rukovanje sa sala objektima
  *
  */
+@Entity
 @SuppressWarnings("serial")
 public class JokeDto implements Serializable{
 	 private ArrayList < Object > categories = new ArrayList < Object > ();
 	 private String created_at;
 	 private String icon_url;
+	 @Id
 	 private String id;
 	 private String updated_at;
 	 private String url;

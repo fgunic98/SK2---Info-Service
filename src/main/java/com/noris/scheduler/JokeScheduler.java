@@ -28,6 +28,7 @@ public class JokeScheduler {
 	
 	@Autowired
     private RestTemplate norisApiClient;
+	
     private JokeService jokeService;
 
     public JokeScheduler(JokeService jokeService) {
@@ -50,7 +51,6 @@ public class JokeScheduler {
             	System.out.println(response);
             	jokeService.add(response.getBody());
             }
-                //jmsTemplate.convertAndSend(emailQueueDestination, objectMapper.writeValueAsString(response.getBody().getValue()));
         } catch (Exception ex) {
            ex.printStackTrace();
 
